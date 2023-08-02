@@ -40,3 +40,7 @@ app.get('/chat_Woman_T', function(req, res){
 app.get('/chat_Woman_F', function(req, res){
     res.sendFile(__dirname + '/chat_Woman_F.html');
 })
+
+app.get('/codingapple', function(req, res){
+    res.sendFile(__dirname + '/codingapple.html');
+})
