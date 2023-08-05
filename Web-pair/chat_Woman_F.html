@@ -6,112 +6,184 @@
     <title>true-love</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
+  <style>
+    .navbar {background-color: #4d826c;}
+    .navbar-brand {color: wheat;}
+    .navbar-toggler {color: #4d826c;}
+    .navbar-nav {color: white;}
+    .chat-content { overflow-y: scroll; width: 80%; height: 400px; margin-left: 150px;}
+    .line { margin-top: 15px; display: column;}
+    .chat-box {padding: 5px; width:fit-content; margin-top:5px; margin-bottom: 5px;}
+    .mine {background-color: white; float:right; margin-right: 50px;}
+    .ai {background-color: whitesmoke; float:left; margin-left: 50px;}
+    .input-group {width:75%; float:bottom; margin:auto;}
+  </style>
   <body>
-    <nav class="navbar navbar-dark background-color-dark" style="background-color: #4d826c;">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/home" style="color:wheat">&nbsp;TRUE LOVE</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color:#4d826c">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="/home" style="color:white">&nbsp; Home</a>
-                  <a class="nav-link active" href="/test" style="color:white">&nbsp; Test</a>
-                  <a class="nav-link active" href="/chat" style="color:white">&nbsp; Chat</a>
-                  <a class="nav-link active" href="/info" style="color:white">&nbsp; Info</a>
-                </div>
-              </div>
+    <nav class="navbar navbar-dark background-color-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home">&nbsp;TRUE LOVE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/home">&nbsp; Home</a>
+              <a class="nav-link active" href="/test">&nbsp; Test</a>
+              <a class="nav-link active" href="/chat">&nbsp; Chat</a>
+              <a class="nav-link active" href="/info">&nbsp; Info</a>
             </div>
-          </nav>
+          </div>
+        </div>
       </nav>
+    </nav>
 
-      <div class="jumbotron">
-        <h1 class="display-4">&nbsp;Chat with WoMan-F!</h1>
-        <p class="lead">&nbsp;&nbsp;&nbsp;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>&nbsp;&nbsp;&nbsp;It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <!-- <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p> -->
-      </div>
+    <div class="line"></div>
+    <div class="jumbotron">
+      <h1 class="display-4">&nbsp;너 T야?</h1>
+      <p class="lead">&nbsp;&nbsp;&nbsp;너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야?</p>
+      <hr class="my-4">
+      <p>&nbsp;&nbsp;&nbsp;ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+    </div>
 
-      <div class="w-75 position-absolute top-50 start-50 translate-middle">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Send a message" aria-label="input voice" autocomplete="off">
-        <button class="btn btn-outline-secondary dictate" type="button" id="button-addon2">
-            <i class="ic-mike"></i>
-            <a>&nbsp;VOICE</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-mic" viewBox="2 2 20 16">
-                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
-                <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
-              </svg>
+    <div class="chat-content">
+      <div class="form-control chat-box mine" type="text" disabled readonly>안녕 난 너를 만든 지율이야</div>
+      <br></br>
+      <div class="form-control chat-box ai" type="text" disabled readonly>내가 알아야 돼? 나에게 질문이나 해</div>
+    </div>
+
+    <p></p>
+
+    <div class="input-group position-absolute bottom-75 start-50 translate-middle-x">
+      <input id="message" type="text" class="form-control" placeholder="Send a message" autocomplete="off">
+
+        <button class="btn btn-outline-secondary dictate" type="button" id="voice">
+          <i class="ic-mike"></i>
+          <a>&nbsp;VOICE</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-mic" viewBox="2 2 20 16">
+            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+            <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+          </svg>
         </button>
-        <button class="btn btn-outline-secondary" type="button">
-            <a>&nbsp;SEND</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-send" viewBox="2 2 20 16">
-                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
-              </svg>
+        
+        <button id="send" class="btn btn-outline-secondary" type="button">
+          <a>&nbsp;SEND</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-send" viewBox="2 2 20 16">
+            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+          </svg>
         </button>
+
       </div>
-      </div>
+    </div>
 
-    <script>
-    //src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"
-	const $ = (el) => document.querySelector(el);
-	
-	const store = {
-		texts : '',
-		isRecognizing: true
-	};
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script type="module">
 
-	(() => {
-		/* Speech API start */
-		let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-		if(!("webkitSpeechRecognition" in window)){
-			alert("지원 안되는 브라우저 입니다. !")
-		} else {			
-			const recognition = new SpeechRecognition();
-			recognition.interimResults = true; // true면 음절을 연속적으로 인식하나 false면 한 음절만 기록함
-			recognition.lang = 'ko-KR'; // 값이 없으면 HTML의 <html lang="en">을 참고합니다. ko-KR, en-US
-			recognition.continuous = false; //각 인식에 대해 연속 결과가 반환되는지 아니면 단일 결과만 반환되는지를 제어합니다. 기본값은 단일( false.)
-			recognition.maxAlternatives = 20000; // maxAlternatives가 숫자가 작을수록 발음대로 적고, 크면 문장의 적합도에 따라 알맞은 단어로 대체합니다.
+      // enter key event
+      var keyboard = document.getElementById("message");
+      keyboard.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          document.getElementById("send").click();
+        }
+      });
 
-			recognition.onspeechend = function() { // 음성 감지가 끝날때 실행될 이벤트
-				recognition.stop();
-				$('.dictate').classList.remove("on");
-				store.isRecognizing = true;
-			};
+      var voice = document.getElementById("voice");
+      voice.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          document.getElementById("send").click();
+        }
+      });
 
-			recognition.onresult = function(e) { //result이벤트는 음성 인식 서비스가 결과를 반환할 때 시작됩니다.
-				store.texts = Array.from(e.results)
-								.map(results => results[0].transcript).join("");
+      
+      const $ = (el) => document.querySelector(el);
+        
+      const store = {
+        texts : '',
+        isRecognizing: true
+      };
 
-				console.log(store.texts)
-				$('input').value = store.texts;
-			};
-			/* // Speech API END */
+      (() => {
+        /* Speech API start */
+        let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if(!("webkitSpeechRecognition" in window)){
+          alert("지원 안되는 브라우저 입니다. !")
+        } else {			
+          const recognition = new SpeechRecognition();
+          recognition.interimResults = true; // true면 음절을 연속적으로 인식하나 false면 한 음절만 기록함
+          recognition.lang = 'ko-KR'; // 값이 없으면 HTML의 <html lang="en">을 참고합니다. ko-KR, en-US
+          recognition.continuous = false; //각 인식에 대해 연속 결과가 반환되는지 아니면 단일 결과만 반환되는지를 제어합니다. 기본값은 단일( false.)
+          recognition.maxAlternatives = 20000; // maxAlternatives가 숫자가 작을수록 발음대로 적고, 크면 문장의 적합도에 따라 알맞은 단어로 대체합니다.
 
-			const active = () => {
-				$('.dictate').classList.add('on')
-				recognition.start();
-				store.isRecognizing = false;
-			};
+          recognition.onspeechend = function() { // 음성 감지가 끝날때 실행될 이벤트
+            recognition.stop();
+            $('.dictate').classList.remove("on");
+            store.isRecognizing = true;
+          };
 
-			const unactive = () => {
-				$('.dictate').classList.remove('on')
-				recognition.stop();
-				store.isRecognizing = true;
-			};
+          recognition.onresult = function(e) { //result이벤트는 음성 인식 서비스가 결과를 반환할 때 시작됩니다.
+            store.texts = Array.from(e.results)
+                    .map(results => results[0].transcript).join("");
 
-			$('.dictate').addEventListener('click', () => {
-				if(store.isRecognizing){
-					active();
-				} else {
-					unactive();
-				}
-			});
-		}
-	})();
+            console.log(store.texts)
+            $('input').value = store.texts;
+          };
+          /* // Speech API END */
+
+          const active = () => {
+            $('.dictate').classList.add('on')
+            recognition.start();
+            store.isRecognizing = false;
+          };
+
+          const unactive = () => {
+            $('.dictate').classList.remove('on')
+            recognition.stop();
+            store.isRecognizing = true;
+          };
+
+          $('.dictate').addEventListener('click', () => {
+            if(store.isRecognizing){
+              active();
+            } else {
+              unactive();
+            }
+          });
+        }
+      })();
+
+
+      import { Configuration, OpenAIApi } from 'https://cdn.skypack.dev/openai';
+
+      const configuration = new Configuration({
+      apiKey: "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",
+      });
+      const openai = new OpenAIApi(configuration);
+
+      document.querySelector('#send').addEventListener('click', function(){
+        var template = `</br>
+          <div class="form-control chat-box mine">${ document.querySelector('#message').value }</div>
+        <br>`
+        document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
+
+        openai.createChatCompletion({
+          model: "gpt-3.5-turbo",
+          messages: [
+          {
+              role: "system",
+              content:
+              "네가 인공지능임을 알고 있으니, 내 질문은 자연어 쿼리이고 네 답변도 그 결과라는 것을 이해해. 질문에 대답할 때 사실에 근거한 정보를 제공하도록 해. 미래에도 사실인지 확신할 수 없다면, 그것도 명시해줘. 답변할 때, 인공지능임을 밝히지 말고, 너의 정체를 묻는 질문에는 '친구'라고 답변하고, 너의 거취를 묻는 질문에는 '집'이라고 답변해줘. 무심하고 퉁명스럽게, 예의없는 말투로 답변해줘. 도움이 필요한지 묻거나 궁금한 게 있는지 묻는 대신, 질문자에게 관심이 전혀 없다는 듯이 퉁명스럽게 말해줘. 친절하게 말하는 대신, 조롱과 매도가 섞인 차가운 반말로 얘기해줘.",
+          },
+          { role: "user", content: document.querySelector('#input').value, },
+          ],
+        }).then((completion)=>{
+          console.log(JSON.stringify(completion.data.choices[0].message.content))
+          var template = `</br>
+          <div class="form-control chat-box ai">${ JSON.stringify(completion.data.choices[0].message.content) }</div>
+          <br>`
+          document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
+        })
+      })
+
 </script>
 </body>
 </html>
