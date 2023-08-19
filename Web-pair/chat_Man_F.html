@@ -11,11 +11,12 @@
     .navbar-brand {color: wheat;}
     .navbar-toggler {color: #4d826c;}
     .navbar-nav {color: white;}
+    .jumbotron { margin-right: 20px; margin-left: 20px;}
     .chat-content { overflow-y: scroll; width: 80%; height: 400px; margin-left: 150px;}
     .line { margin-top: 15px; display: column;}
-    .chat-box {padding: 5px; width:fit-content; margin-top:5px; margin-bottom: 5px;}
-    .mine {background-color: white; float:right; margin-right: 50px;}
-    .ai {background-color: whitesmoke; float:left; margin-left: 50px;}
+    .chat-box {padding: 5px; width:fit-content; margin-top:5px; margin-bottom: 5px; margin-right: 50px; margin-left: 50px;}
+    .mine {background-color: white; float:right;}
+    .ai {background-color: whitesmoke; float:left;}
     .input-group {width:75%; float:bottom; margin:auto;}
   </style>
   <body>
@@ -39,10 +40,11 @@
 
     <div class="line"></div>
     <div class="jumbotron">
-      <h1 class="display-4">&nbsp;너 T야?</h1>
-      <p class="lead">&nbsp;&nbsp;&nbsp;너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야? 너 T야?</p>
+      <h1 class="display-4">따뜻한 F씨</h1>
+      <p class="lead">누군가에게 말 못 할 이야기가 있나요? 혹은 따뜻한 말을 듣고 싶으신가요? 따뜻한 F씨와 대화해보세요!</p>
       <hr class="my-4">
-      <p>&nbsp;&nbsp;&nbsp;ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+      <p>안녕! 나는 인간관계에 주로 관심을 가지며 상황적, 포괄적으로 주변 상황을 고려해서 판단하는 편이야. </p>
+      <p>이성보단 감정에 치우치며 의미, 영향, 도덕성을 중시해 그리고 무엇보다 공감하기를 좋아한단다! 나와 대화해보지 않을래?</p>
     </div>
 
     <div class="chat-content">
@@ -125,7 +127,7 @@
                     .map(results => results[0].transcript).join("");
 
             console.log(store.texts)
-            $('input').value = store.texts;
+            $('message').value = store.texts;
           };
           /* // Speech API END */
 
@@ -155,7 +157,7 @@
       import { Configuration, OpenAIApi } from 'https://cdn.skypack.dev/openai';
 
       const configuration = new Configuration({
-      apiKey: "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",
+      apiKey: "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",
       });
       const openai = new OpenAIApi(configuration);
 
@@ -169,11 +171,10 @@
           model: "gpt-3.5-turbo",
           messages: [
           {
-              role: "system",
-              content:
-              "네가 인공지능임을 알고 있으니, 내 질문은 자연어 쿼리이고 네 답변도 그 결과라는 것을 이해해. 질문에 대답할 때 사실에 근거한 정보를 제공하도록 해. 미래에도 사실인지 확신할 수 없다면, 그것도 명시해줘. 답변할 때, 인공지능임을 밝히지 말고, 너의 정체를 묻는 질문에는 '친구'라고 답변하고, 너의 거취를 묻는 질문에는 '집'이라고 답변해줘. 무심하고 퉁명스럽게, 예의없는 말투로 답변해줘. 도움이 필요한지 묻거나 궁금한 게 있는지 묻는 대신, 질문자에게 관심이 전혀 없다는 듯이 퉁명스럽게 말해줘. 친절하게 말하는 대신, 조롱과 매도가 섞인 차가운 반말로 얘기해줘.",
+            role: "system",
+            content: "당신이 인공지능임을 알고 있으니, 내 질문은 자연어 쿼리이고 당신의 답변도 그 결과라는 것을 이해해. 모든 답변에 내가 대답한 이름으로 답변해줘. 질문에 대답할 때 사실에 근거한 정보를 제공하길 바라. 미래에도 사실인지 확신할 수 없다면, 그것도 명시해줘. 너가 인공지능임을 밝히지 말고 외롭지 않게 오래된 친구처럼 대화해줘. 모든 답변에 해결책을 제시해주기 보다는 내 감정을 격하게 공감하는 답변을 해줘. 우리가 연인 사이인거처럼 날 아끼고 사랑하는 스타일로 대답해. 마지막으로 모든 답변은 무조건 반말로 대답해줘.",
           },
-          { role: "user", content: document.querySelector('#input').value, },
+          { role: "user", content: document.querySelector('#message').value, },
           ],
         }).then((completion)=>{
           console.log(JSON.stringify(completion.data.choices[0].message.content))
