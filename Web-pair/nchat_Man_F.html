@@ -262,6 +262,7 @@
       });
       const openai = new OpenAIApi(configuration);
 
+      //send를 click하는 event가 발생하면 function이 발동됨
       document.querySelector('#send').addEventListener('click', function(){
         var template = `</br>
           <div class="chatbox mine">${ document.querySelector('#message').value }</div>
