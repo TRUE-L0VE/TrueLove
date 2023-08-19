@@ -13,9 +13,9 @@
     .navbar-nav {color: white;}
     .chat-content { overflow-y: scroll; width: 80%; height: 400px; margin-left: 150px;}
     .line { margin-top: 15px; display: column;}
-    .chat-box {padding: 5px; width:fit-content; margin-top:5px; margin-bottom: 5px;}
-    .mine {background-color: white; float:right; margin-right: 50px;}
-    .ai {background-color: whitesmoke; float:left; margin-left: 50px;}
+    .chat-box {padding: 5px; width:fit-content; margin-top:5px; margin-bottom: 5px; margin-right: 50px; margin-left: 50px;}
+    .mine {background-color: white; float:right;}
+    .ai {background-color: whitesmoke; float:left;}
     .input-group {width:75%; float:bottom; margin:auto;}
   </style>
   <body>
@@ -125,7 +125,7 @@
                     .map(results => results[0].transcript).join("");
 
             console.log(store.texts)
-            $('input').value = store.texts;
+            $('message').value = store.texts;
           };
           /* // Speech API END */
 
@@ -155,7 +155,7 @@
       import { Configuration, OpenAIApi } from 'https://cdn.skypack.dev/openai';
 
       const configuration = new Configuration({
-      apiKey: "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",
+      apiKey: "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",
       });
       const openai = new OpenAIApi(configuration);
 
@@ -169,11 +169,10 @@
           model: "gpt-3.5-turbo",
           messages: [
           {
-              role: "system",
-              content:
-              "네가 인공지능임을 알고 있으니, 내 질문은 자연어 쿼리이고 네 답변도 그 결과라는 것을 이해해. 질문에 대답할 때 사실에 근거한 정보를 제공하도록 해. 미래에도 사실인지 확신할 수 없다면, 그것도 명시해줘. 답변할 때, 인공지능임을 밝히지 말고, 너의 정체를 묻는 질문에는 '친구'라고 답변하고, 너의 거취를 묻는 질문에는 '집'이라고 답변해줘. 무심하고 퉁명스럽게, 예의없는 말투로 답변해줘. 도움이 필요한지 묻거나 궁금한 게 있는지 묻는 대신, 질문자에게 관심이 전혀 없다는 듯이 퉁명스럽게 말해줘. 친절하게 말하는 대신, 조롱과 매도가 섞인 차가운 반말로 얘기해줘.",
+            role: "system",
+            content: "네가 인공지능임을 알고 있으니, 내 질문은 자연어 쿼리이고 네 답변도 그 결과라는 것을 이해해. 질문에 대답할 때 사실에 근거한 정보를 제공하도록 해. 미래에도 사실인지 확신할 수 없다면, 그것도 명시해줘. 답변할 때, 인공지능임을 밝히지 말고, 너의 정체를 묻는 질문에는 '친구'라고 답변하고, 너의 거취를 묻는 질문에는 '집'이라고 답변해줘. 무심하고 퉁명스럽게, 예의없는 말투로 답변해줘. 도움이 필요한지 묻거나 궁금한 게 있는지 묻는 대신, 질문자에게 관심이 전혀 없다는 듯이 퉁명스럽게 말해줘. 친절하게 말하는 대신, 조롱과 매도가 섞인 차가운 반말로 얘기해줘.",
           },
-          { role: "user", content: document.querySelector('#input').value, },
+          { role: "user", content: document.querySelector('#message').value, },
           ],
         }).then((completion)=>{
           console.log(JSON.stringify(completion.data.choices[0].message.content))
