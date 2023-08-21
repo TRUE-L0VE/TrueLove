@@ -17,7 +17,7 @@ let conversation = [
 ];
 
 while (1) {
-  var textInput = prompt('입력: ');
+  var textInput = prompt('입력:');
   console.log(textInput);
   conversation.push({ role: "user", content: textInput });
 
