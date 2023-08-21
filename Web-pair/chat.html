@@ -4,94 +4,160 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>true-love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
   <style>
-    .navbar {background-color: #4d826c;}
-    .navbar-brand {color: wheat;}
-    .navbar-toggler {color: #4d826c;}
-    .navbar-nav {color: white;}
-    .btn {color:white; background-color: #4d826c; border: none;}
+    .brand {
+      margin: 0 auto;
+      top: 300px;
+      text-align: center;
+      color: #000;
+      font-family: 'Syne', sans-serif;
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+    }
+    .ellipse {
+      position: fixed;
+      z-index: -1;
+      fill: linear-gradient(0deg, rgba(36, 0, 255, 0.30) 0%, rgba(36, 0, 255, 0.30) 100%), linear-gradient(180deg, #FF59BD 0%, rgba(73, 255, 168, 0.00) 100%);
+      filter: blur(100px);
+    }
+    .menu {
+      position:sticky;
+      float: right;
+      float: top;
+      margin-top: 10px;
+      margin-right: 50px;
+    }
+    .chatbtn {
+      z-index: 2;
+      position:fixed;
+      top: 500px; 
+      left:950px;
+      width: 240px;
+      height: 60px;
+      border-radius: 40px;
+      border: 3px solid #000000;
+      background: rgba(255, 255, 255, 0.3);
+      color:#000;
+    }
+    .txt {
+      z-index: 3;
+      color: #000;
+      opacity: 500;
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .rectangle {
+        position: absolute;
+        width: 350px;
+        height: 200px;
+        border-radius: 100px;
+        border: 1px solid #000;
+        background: transparent;
+        z-index: 10; 
+    }
+    .subtitle {
+        position: absolute;
+        text-align: center;
+        margin-left: 20%;
+        top: 20px;
+        color: #000;
+        font-family: 'Syne', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .detail {
+        position:absolute;
+        top: 70px;
+        text-align: center;
+        color: #000;
+        font-family: 'Syne', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: -3%
+    }
   </style>
   <body>
-    <nav class="navbar navbar-dark background-color-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/home">&nbsp;TRUE LOVE</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/home">&nbsp; Home</a>
-              <a class="nav-link active" href="/test">&nbsp; Test</a>
-              <a class="nav-link active" href="/chat">&nbsp; Chat</a>
-              <a class="nav-link active" href="/info">&nbsp; Info</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </nav>
-
-    <div class="jumbotron">
-      <h1 class="display-4">&nbsp;Hello, world!</h1>
-      <p class="lead">&nbsp;&nbsp;&nbsp;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-    </div>
-
-    <div>&nbsp;</div>
-
-    <div style="display: inline-block;">
-      <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>      
-    </div>
-
-    <div class="card position" style="width: 18rem; display: inline-block;" >
-      <img src="https://i.ibb.co/thQz5ct/wade-T.jpg" class="card-img-top" alt="Man-T">
-      <div class="card-body">
-        <h5 class="card-title">Chat with <strong>Man-T</strong></h5>
-        <p class="card-text">Wade is a go-with-the-flow guy, social and enthusiastic. He is sensitive and cries for many thing.</p>
-        <a href="/chat_Man_T" class="btn">Let's Chat!</a>
-      </div>
-    </div>
-
-    <div style="display: inline-block;">
-      <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>      
-    </div>
-
-    <div class="card position" style="width: 18rem; display: inline-block;" >
-      <img src="https://i.ibb.co/BqsY77j/wade.jpg" class="card-img-top" alt="Man-F">
-      <div class="card-body">
-        <h5 class="card-title">Chat with <strong>Man-F</strong></h5>
-        <p class="card-text">Wade is a go-with-the-flow guy, social and enthusiastic. He is sensitive and cries for many thing.</p>
-        <a href="/chat_Man_F" class="btn">Let's Chat!</a>
-      </div>
-    </div>
-
-    <div style="display: inline-block;">
-      <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>      
-    </div>
-
-    <div class="card position" style="width: 18rem; display: inline-block;" >
-      <img src="https://i.ibb.co/sygd4JX/amber-T.jpg" class="card-img-top" alt="Woman-T">
-      <div class="card-body">
-        <h5 class="card-title">Chat with <strong>Woman-T</strong></h5>
-        <p class="card-text">Ember is a kind and hard-working young woman. She respects and loves her family unconditionally.</p>
-        <a href="/chat_Woman_T" class="btn">Let's Chat!</a>
-      </div>
-    </div>
-
-    <div style="display: inline-block;">
-      <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>      
-    </div>
-
-    <div class="card position" style="width: 18rem; display: inline-block;" >
-      <img src="https://i.ibb.co/h2pQ357/amber.jpg" class="card-img-top" alt="Woman-F">
-      <div class="card-body">
-        <h5 class="card-title">Chat with <strong>Woman-F</strong></h5>
-        <p class="card-text">Ember is a kind and hard-working young woman. She respects and loves her family unconditionally.</p>
-        <a href="/chat_Woman_F" class="btn">Let's Chat!</a>
-      </div>
-    </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <br></br>
+
+    <a href="/menu" class="menu" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <path d="M13 75H88V66.6667H13V75ZM13 54.1667H88V45.8333H13V54.1667ZM13 25V33.3333H88V25H13Z" fill="black"/>
+      </svg>
+    </a>
+    <div class="brand">TRUE LOVE</div>
+
+    <br></br>
+    <br>
+
+    <span class="btn rectangle" type="btn" style="left:25%">
+        <a href="/chat_Man_T">
+            <div class="subtitle">MAN-T</div>
+            <div class="detail">CHAT VIA TRUELOVE CHAT VIA TRUELOVE</div>
+        </a>
+    </span>
+
+    <span class="btn rectangle" type="btn" style="right:25%">
+        <a href="/chat_Man_F">
+            <div class="subtitle">MAN-F</div>
+            <div class="detail">CHAT VIA TRUELOVE CHAT VIA TRUELOVE</div>
+        </a>
+    </span>
+
+    <br></br>
+    <br></br>
+    <br></br>
+    <br>
+    <br></br>
+
+    <span class="btn rectangle" type="btn" style="left:25%">
+        <a href="/chat_Woman_T">
+            <div class="subtitle" style="margin-left: 6%;">WOMAN-T</div>
+            <div class="detail">CHAT VIA TRUELOVE CHAT VIA TRUELOVE</div>
+        </a>
+    </span>
+
+    <span class="btn rectangle" type="btn" style="right:25%">
+        <a href="/chat_Woman_F">
+            <div class="subtitle" style="margin-left: 6%;">WOMAN-F</div>
+            <div class="detail">CHAT VIA TRUELOVE CHAT VIA TRUELOVE</div>
+        </a>
+    </span>
+
+    <p class="ellipse position-absolute top-50 start-50 translate-middle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1225" height="735" viewBox="0 0 1225 735" fill="none">
+        <g opacity="0.5" filter="url(#filter0_f_4_7)">
+          <path d="M1025 471.5C1025 621.445 840.317 743 612.5 743C384.683 743 200 621.445 200 471.5C200 321.555 384.683 200 612.5 200C840.317 200 1025 321.555 1025 471.5Z" fill="url(#paint0_linear_4_7)"/>
+          <path d="M1025 471.5C1025 621.445 840.317 743 612.5 743C384.683 743 200 621.445 200 471.5C200 321.555 384.683 200 612.5 200C840.317 200 1025 321.555 1025 471.5Z" fill="#2400FF" fill-opacity="0.3"/>
+        </g>
+        <defs>
+          <filter id="filter0_f_4_7" x="0" y="0" width="1225" height="943" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_4_7"/>
+          </filter>
+          <linearGradient id="paint0_linear_4_7" x1="612.5" y1="200" x2="612.5" y2="743" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FF59BD"/>
+            <stop offset="1" stop-color="#49FFA8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </p>
+
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </html>
